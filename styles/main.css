@@ -1,0 +1,10 @@
+.item-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+}
