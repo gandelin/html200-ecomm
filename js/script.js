@@ -55,3 +55,8 @@ for (var key in products) {
   console.log("Description: " + products[key].description);
   console.log("Image Title: " + products[key].imageTitle);
 }
+
+function sortProducts(filter) {
+  console.log("Selected Filter is: " + filter.value);
+  event.preventDefault();
+}

@@ -9,15 +9,28 @@
   <link rel="stylesheet" href="styles/main.css">
 
   <script src="https://use.fontawesome.com/81140c216b.js"></script>
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 
 <body>
   <header>
-    <nav>
-      <ul>
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
         <li><a href="#">Hats</a></li>
         <li><a href="#">Gloves</a></li>
-        <li><a href="#">Scarves</a></li>
+        <li class="active"><a href="#">Scarves</a></li>
         <li class="cart-info">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </li>
@@ -28,7 +41,7 @@
   </header>
 
   <aside>
-    <form>
+    <form class="navbar-form navbar-right" onsubmit="sortProducts(filter)">
       <label>Filter By:
         <select name="filter">
           <option value="">Choose One</option>
@@ -42,22 +55,38 @@
   </aside>
 
   <section>
-    <h2>Scarves</h2>
+    <h2 class="category">Scarves</h2>
 
-    <div class="item-container">
-      <div class="item">
-        <label>Name: Reversible Plaid</label>
-        <label>Price: $26.99</label>
-        <label>Description: Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</label>
-      </div>
-      <div class="item">
-        <label>Name: Wool Cable Knit</label>
-        <label>Price: $49.99</label>
-        <label>Description: Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</label>
+    <div class="row">
+      <div class="item-container">
+        <div class="item col-md-3">
+          <label>Name: Reversible Plaid</label>
+          <label>Price: $26.99</label>
+          <label>Description: Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</label>
+        </div>
+        <div class="item col-md-3">
+          <label>Name: Wool Cable Knit</label>
+          <label>Price: $49.99</label>
+          <label>Description: Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</label>
+        </div>
+        <div class="item col-md-3">
+          <label>Name: Northern Lights</label>
+          <label>Price: $29.99</label>
+          <label>Description: Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</label>
+        </div>
+        <div class="item col-md-3">
+          <label>Name: Ombre Infinity</label>
+          <label>Price: $11.99</label>
+          <label>"A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</label>
+        </div>
       </div>
     </div>
   </section>
 
   <script type="text/javascript" src="js/script.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

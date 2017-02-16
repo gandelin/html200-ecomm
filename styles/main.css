@@ -8,3 +8,15 @@
   flex-direction: column;
   width: 20em;
 }
+
+.cart-info {
+  color: cyan;
+}
+
+h1 {
+  text-align: center;
+}
+
+.category {
+  color: crimson;
+}
