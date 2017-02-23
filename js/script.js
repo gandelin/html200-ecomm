@@ -60,3 +60,13 @@ function sortProducts(filter) {
   console.log("Selected Filter is: " + filter.value);
   event.preventDefault();
 }
+
+function cartPrice(selectedProducts) {
+  var totalPrice = 0;
+  for (var ix = 0; ix < selectedProducts.length; ix++) {
+    if (selectedProducts[ix].price) {
+      totalPrice += selectedProducts[ix].price;
+    }
+  }
+  return totalPrice
+}
