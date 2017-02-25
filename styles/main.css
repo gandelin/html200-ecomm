@@ -15,12 +15,20 @@ html {
   width: 300px;
  }
 
-@media (max-width: 500px) {
-  .item {font-size: 2rem; font-family: serif; color: midnightblue}
+@media only screen and (max-width: 320px) {
+  .item {font-size: 1em; font-family: serif; color: midnightblue}
 }
 
-@media (min-width: 500px) {
-  .item {font-size: 1rem; font-family: cursive; color: darkmagenta}
+@media only screen and (min-width: 320px) and (max-width: 700px) {
+  .item {font-size: 2em; font-family: cursive; color: darkmagenta}
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .item {font-size: .5em; font-family: cursive; color: cyan}
+}
+
+@media only screen and (min-width: 1024px) {
+  .item {font-size: 1em; font-family: sans-serif; color: firebrick}
 }
 
 .cart-info {
