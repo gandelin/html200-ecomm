@@ -14,11 +14,12 @@ html {
 .item {
   width: 300px;
   font-family:cursive;
-  font-size: 2rem;
+  font-size: 1rem;
  }
 
 .cart-info {
   color: cyan;
+  float: right;
 }
 
 h1 {
