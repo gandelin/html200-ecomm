@@ -17,6 +17,10 @@ html {
   font-size: 1rem;
  }
 
+@media (max-width: 500px) {
+  .item {font-size: 2rem}
+}
+
 .cart-info {
   color: cyan;
   float: right;
