@@ -16,16 +16,29 @@ html {
   font-family: cursive;
  }
 
-@media only screen and (min-width: 768px) {
-  .item {font-size: 1em; color: darkmagenta}
+/* really small phones */
+@media only screen and (max-width: 320px) {
+  .item {font-size: 2em; color: fuchsia}
 }
 
-@media only screen and (max-width: 767px) and (orientation: landscape) {
+/* phones */
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .item {font-size: 2em; color: darkcyan}
 }
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-  .item {font-size: 3em; color: darkblue}
+/* phone in portrait mode */
+@media only screen and (min-width: 321px) and (orientation: portrait) {
+  .item {font-size: 2.5em; color: darkblue}
+}
+
+/* tablets */
+@media only screen and (min-width: 481px) {
+  .item {font-size: 1em; color: green}
+}
+
+/* desktop and laptop */
+@media only screen and (min-width: 801px) {
+  .item {font-size: 1em; color: darkmagenta}
 }
 
 .cart-info {
