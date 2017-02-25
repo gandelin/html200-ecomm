@@ -13,26 +13,19 @@ html {
 
 .item {
   width: 22em;
+  font-family: cursive;
  }
 
-@media only screen and (max-width: 320px) {
-  .item {font-size: 2em; font-family: serif; color: saddlebrown}
+@media only screen and (min-width: 768px) {
+  .item {font-size: 1em; color: darkmagenta}
 }
 
-@media only screen and (min-width: 320px) and (max-width: 736px) {
-  .item {font-size: 2em; font-family: cursive; color: darkmagenta}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .item {font-size: 2em; color: darkcyan}
 }
 
-@media only screen and (min-width: 736px) and (max-width: 1024px) and (orientation: landscape) {
-  .item {font-size: 2em; font-family: cursive; color: darkcyan}
-}
-
-@media only screen and (min-width: 736px) and (max-width: 1024px) and (orientation: portrait) {
-  .item {font-size: 3em; font-family: cursive; color: darkblue}
-}
-
-@media only screen and (min-width: 1024px) {
-  .item {font-size: 1em; font-family: sans-serif; color: firebrick}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .item {font-size: 3em; color: darkblue}
 }
 
 .cart-info {
