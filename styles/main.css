@@ -18,7 +18,7 @@ html {
  }
 
 @media (max-width: 500px) {
-  .item {font-size: 2rem}
+  .item {font-size: 2rem; font-family: serif; color: darkmagenta}
 }
 
 .cart-info {
