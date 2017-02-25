@@ -13,12 +13,14 @@ html {
 
 .item {
   width: 300px;
-  font-family:cursive;
-  font-size: 1rem;
  }
 
 @media (max-width: 500px) {
-  .item {font-size: 2rem; font-family: serif; color: darkmagenta}
+  .item {font-size: 2rem; font-family: serif; color: midnightblue}
+}
+
+@media (min-width: 500px) {
+  .item {font-size: 1rem; font-family: cursive; color: darkmagenta}
 }
 
 .cart-info {
