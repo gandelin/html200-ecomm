@@ -50,16 +50,46 @@ var products = [
   }
 ];
 
-for (var key in products) {
-  console.log("Name: " + products[key].name);
-  console.log("Price: " + products[key].price);
-  console.log("Description: " + products[key].description);
-  console.log("Image Title: " + products[key].imageTitle);
+function listProducts() {
+  for (var key in products) {
+    console.log("Name: " + products[key].name);
+    console.log("Price: " + products[key].price);
+    console.log("Description: " + products[key].description);
+    console.log("Image Title: " + products[key].imageTitle);
+  }
+}
+
+function compareProductsByName(a, b) {
+  var cmpVal = 0;
+  var aName = a.name.toLowerCase();
+  var bName = b.name.toLowerCase();
+  if (aName < bName) {
+    cmpVal = -1;
+  }
+  else if (aName > bName) {
+    cmpVal = 1;
+  }
+  return cmpVal;
+}
+
+function compareProductsByPrice(a, b) {
+  return a.price - b.price;
 }
 
 function sortProducts(filter) {
-  console.log("Selected Filter is: " + filter.value);
   event.preventDefault();
+  console.log("Selected Filter is: " + filter.value);
+  switch (filter.value) {
+    case 'name':
+      products.sort(compareProductsByName);
+      break;
+    case 'price':
+      products.sort(compareProductsByPrice);
+      break;
+    default:
+      console.log("Invalid Filter Value: " + filter.value);
+  }
+  listProducts();
 }
 
 function cartPrice(selectedProducts) {
