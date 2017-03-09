@@ -1,3 +1,4 @@
+var cart = [];
 var products = [
   {
     "name": "Reversible Plaid",
@@ -69,4 +70,56 @@ function cartPrice(selectedProducts) {
     }
   }
   return totalPrice
+}
+
+/* 
+ Add the productName to the shopping cart.
+ */
+function addToCart(productName) {
+  // if product name is in product list
+  if (findProduct(productName) >= 0) {
+    // if product is not already in the cart add it
+    if (findNameInCart(productName) < 0) {
+      cart.push(productName);
+    }
+  }
+  console.log(cart);
+}
+
+/*
+ Remove the product name from the shopping cart
+ */
+function removeFromCart(productName) {
+  var ix = findNameInCart(productName);
+  if (ix >= 0) {
+    cart.splice(ix, 1);
+  }
+  console.log(cart);
+}
+
+/*
+ Returns the productName index in the shopping cart; otherwise it returns -1
+ */
+function findNameInCart(productName) {
+  var productIndex = -1;
+  if (productName != null) {
+    productIndex = cart.indexOf(productName);
+  }
+  return productIndex;
+}
+
+/*
+ This function returns the product index if productName is found in the product list; otherwise it returns -1.
+ */
+function findProduct(productName) {
+  var productIndex = -1;
+  if (productName != null) {
+    for (var ix = 0; ix < products.length; ix++) {
+      if (products[ix].name === productName) {
+        productIndex = ix;
+        break;
+      }
+    }
+  }
+  return productIndex;
 }
