@@ -108,10 +108,8 @@ function cartPrice(selectedProducts) {
 function addToCart(productName) {
   // if product name is in product list
   if (findProduct(productName) >= 0) {
-    // if product is not already in the cart add it
-    if (findNameInCart(productName) < 0) {
-      cart.push(productName);
-    }
+    // Allow to add multiples of product
+    cart.push(productName);
   }
   console.log(cart);
   updateItemsInCart();
