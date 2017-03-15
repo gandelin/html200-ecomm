@@ -114,6 +114,7 @@ function addToCart(productName) {
     }
   }
   console.log(cart);
+  updateItemsInCart();
 }
 
 /*
@@ -125,6 +126,7 @@ function removeFromCart(productName) {
     cart.splice(ix, 1);
   }
   console.log(cart);
+  updateItemsInCart();
 }
 
 /*
@@ -152,4 +154,18 @@ function findProduct(productName) {
     }
   }
   return productIndex;
+}
+
+/* 
+ Updates the html to reflect the number of items in the cart
+ */
+function updateItemsInCart() {
+  var cartEl = document.getElementById('itemsInCart');
+  var numberItems = cart.length;
+  if (numberItems > 0) {
+    cartEl.innerHTML = numberItems;
+  }
+  else {
+    cartEl.innerHTML = "";
+  }
 }

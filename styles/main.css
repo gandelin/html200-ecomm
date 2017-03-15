@@ -41,9 +41,21 @@ html {
   .item {font-size: 1em; color: darkmagenta}
 }
 
+.nav>li:last-of-type {
+  position: absolute;
+  right: 1rem;  
+}
+
 .cart-info {
   color: cyan;
-  float: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#itemsInCart {
+  color: cyan;
+  float: left;
+  margin-right: .5rem;
 }
 
 h1 {
